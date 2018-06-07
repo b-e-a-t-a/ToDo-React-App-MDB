@@ -1,16 +1,35 @@
 import React, { Component } from 'react';
 import './App.css';
-import TodoList from './components/TodoList.js'
+import TodoList from './components/TodoList.js';
+import uuid from 'uuid';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       data: [{
-        id: 1,
-        text: 'Task number'
       }]
-    }
+    };
+  }
+  handleClick() {
+    const todo = {
+      text: 'Task number ',
+      id: this.state.data.length,
+    };
+    const data = [...this.state.data, todo];
+    this.setState({
+      data,
+    })
+  }
+
+  handleRemove() {
+
+  }
+
+  handleClear() {
+    this.setState({
+      data: [{}],
+    })
   }
   render() {
     return (
@@ -19,9 +38,17 @@ class App extends Component {
           <h1 className="App-title">TO DO App</h1>
         </header>
         <div className="Buttons">
-          <button className="Buttons-add">Add</button>
-          <button className="Buttons-remove">Remove</button>
-          <button className="Buttons-clear">Clear</button>
+          <button 
+            className="Buttons-add"
+            onClick={this.handleClick.bind(this)}>
+          Add</button>
+          <button
+            className="Buttons-remove"
+            onClick={this.handleRemove.bind(this)}>
+          Remove</button>
+          <button className="Buttons-clear"
+            onClick={this.handleClear.bind(this)}>
+          Clear</button>
         </div>
         <TodoList
           list={this.state.data}
