@@ -1,18 +1,101 @@
+$white: #ffffff;
+$almost-black: #2d3436;
+$grey: #636e72;
+$grey-light: #b2bec3;
+$mint-dark: #00cec9;
+$mint-light: #81ecec;
+$red-dark: #d63031;
+$red-light: #ff7675;
+$orange-dark: #e17055;
+$orange-light: #fab1a0;
+
+@mixin button {
+	font-size: 30px;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding: 10px;
+	cursor: pointer;
+}
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
-
-.App-title {
-  font-size: 1.5em;
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+	background-color: $grey;
+	height: 100%;
+	&-header {
+		background-color: $almost-black;
+		height: 150px;
+		padding: 20px;
+		color: white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&-title {
+  		font-size: 1.5em;
+	}
+	.Buttons {
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		height: 150px;
+		min-width: 200px;
+		max-width: 600px;
+		&-add {
+			@include button;
+			@include border-radius(10px);
+			background-color: $grey;
+			border: solid 4px $mint-dark;
+			color: $mint-dark;
+			&:hover {
+				color: $almost-black;
+				border: solid 4px $almost-black;
+				background-color: $mint-light;
+			}
+			&:focus {
+				outline: none;
+			}
+		}
+		&-remove {
+			@include button;
+			@include border-radius(10px);
+			background-color: $grey;
+			border: solid 4px $orange-dark;
+			color: $orange-dark;
+			&:hover {
+				color: $almost-black;
+				border: solid 4px $almost-black;
+				background-color: $orange-light;
+			}
+			&:focus {
+				outline: none;
+			}
+		}
+		&-clear {
+			@include button;
+			@include border-radius(10px);
+			background-color: $grey;
+			border: solid 4px $red-light;
+			color: $red-light;
+			&:hover {
+				color: $almost-black;
+				border: solid 4px $almost-black;
+				background-color: $red-light;
+			}
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+	.NoTasks {
+		color: $white;
+	}
 }

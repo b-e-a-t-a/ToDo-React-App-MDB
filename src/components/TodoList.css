@@ -1,0 +1,98 @@
+.App {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #636e72;
+  height: 100%; }
+  .App-header {
+    background-color: #2d3436;
+    height: 150px;
+    padding: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .App-title {
+    font-size: 1.5em; }
+  .App .Buttons {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 150px;
+    min-width: 200px;
+    max-width: 600px; }
+    .App .Buttons-add {
+      font-size: 30px;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 10px;
+      cursor: pointer;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      border-radius: 10px;
+      background-color: #636e72;
+      border: solid 4px #00cec9;
+      color: #00cec9; }
+      .App .Buttons-add:hover {
+        color: #2d3436;
+        border: solid 4px #2d3436;
+        background-color: #81ecec; }
+      .App .Buttons-add:focus {
+        outline: none; }
+    .App .Buttons-remove {
+      font-size: 30px;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 10px;
+      cursor: pointer;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      border-radius: 10px;
+      background-color: #636e72;
+      border: solid 4px #e17055;
+      color: #e17055; }
+      .App .Buttons-remove:hover {
+        color: #2d3436;
+        border: solid 4px #2d3436;
+        background-color: #fab1a0; }
+      .App .Buttons-remove:focus {
+        outline: none; }
+    .App .Buttons-clear {
+      font-size: 30px;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 10px;
+      cursor: pointer;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      border-radius: 10px;
+      background-color: #636e72;
+      border: solid 4px #ff7675;
+      color: #ff7675; }
+      .App .Buttons-clear:hover {
+        color: #2d3436;
+        border: solid 4px #2d3436;
+        background-color: #ff7675; }
+      .App .Buttons-clear:focus {
+        outline: none; }
+  .App .NoTasks {
+    color: #ffffff; }
+
+.Tasks {
+  margin: 0 auto;
+  min-width: 200px;
+  max-width: 600px;
+  list-style-type: circle;
+  color: #81ecec;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 0; }
+  .Tasks .Task {
+    font-size: 20px;
+    border: solid 1px #81ecec;
+    margin-bottom: 5px; }

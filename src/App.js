@@ -7,14 +7,14 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: [{
-      }]
+      data: []
     };
   }
   handleClick() {
     const todo = {
       text: 'Task number ',
-      id: this.state.data.length,
+      id: this.state.data.length+1,
+      idx: uuid.v4(),
     };
     const data = [...this.state.data, todo];
     this.setState({
@@ -23,12 +23,16 @@ class App extends Component {
   }
 
   handleRemove() {
-
+    const lastTodo = this.state.data.length;
+    const removal = this.state.data.filter(todo => todo.id !== lastTodo);
+    this.setState({
+      data: removal
+    })
   }
 
   handleClear() {
     this.setState({
-      data: [{}],
+      data: [],
     })
   }
   render() {
@@ -50,9 +54,10 @@ class App extends Component {
             onClick={this.handleClear.bind(this)}>
           Clear</button>
         </div>
-        <TodoList
+        <hr />
+        {this.state.data.length===0 ? <p className="NoTasks">No tasks. Please add a task</p> : <TodoList
           list={this.state.data}
-        />
+        />}
 
       </div>
     );
