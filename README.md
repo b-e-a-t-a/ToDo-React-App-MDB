@@ -1,5 +1,10 @@
 The recruitment task. 
-Description in Polish:
+
+The site is published at:
+https://b-e-a-t-a.github.io/ToDo-React-App-MDB/
+
+
+Description of the command in Polish:
 
 W wybranej technologii (Angular/Vue/React) stwórz prostą aplikacje listy zadan (TODO App). Aplikacja po uruchomieniu pokazuje 3 przyciski - Add, Remove oraz Clear.
 
